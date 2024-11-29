@@ -11,6 +11,7 @@ export class Stack1 extends cdk.Stack {
 			partitionKey: { name: "id", type: dynamodb.AttributeType.STRING },
 			tableName: `${projectName}-table`,
 			billingMode: dynamodb.BillingMode.PAY_PER_REQUEST, // 無料枠内の利用
+			removalPolicy: cdk.RemovalPolicy.DESTROY, // スタックをdestroyしたときにテーブルを削除
 		});
 
 		// エクスポート
