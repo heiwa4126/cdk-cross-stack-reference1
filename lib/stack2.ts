@@ -10,7 +10,7 @@ export class Stack2 extends cdk.Stack {
 		const tableArn = cdk.Fn.importValue(`${projectName}-TableArn`);
 
 		new cdk.CfnOutput(this, "Stack1TableArnOutput", {
-			value: tableArn,
+			value: tableArn
 		});
 	}
 }
